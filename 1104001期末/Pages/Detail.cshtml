@@ -1,0 +1,56 @@
+﻿@page
+@model _1104001期末.Pages.DetailModel
+@{
+    ViewData["Title"] = "角色詳情";
+}
+
+@if (Model.CharacterData != null)
+{
+    <div class="container my-5 text-white">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="@Model.CharacterData.ImagePath" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+                <div class="detail-card p-3 mt-2 rounded shadow">
+                    <h2 class="dream-chartitle @(" char-" + Model.CharacterData.Id)">@Model.CharacterData.Name｜@Model.CharacterData.Sephirot</h2>
+                </div>
+                <br />
+                <h4 class="dream-subtitle">@Model.CharacterData.Quote</h4>
+                <p><pre class="dream-story">@Model.CharacterData.Story</pre></p>
+            </div>
+        </div>
+
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <div id="charGallery" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @{
+                    var images = Model.CharacterData.Gallery.Split(',');
+                    for (int i = 0; i < images.Length; i++)
+                    {
+                        var img = images[i].Trim();
+                        <div class="carousel-item @(i == 0 ? "active" : "")">
+                            <img src="@img" class="d-block w-100 rounded shadow" style="max-height: 480px; object-fit: contain;" />
+                        </div>
+                    }
+                }
+            </div>
+
+            <!-- 左右控制箭頭 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#charGallery" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#charGallery" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    
+}
+
+else
+{
+    <p class="text-danger">角色不存在或資料遺失。</p>
+}
+

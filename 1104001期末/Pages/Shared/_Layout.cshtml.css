@@ -1,0 +1,97 @@
+﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* 通往質點總覽的按鈕 */
+.glow-button {
+    border-radius: 2rem;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    transition: 0.3s ease;
+}
+
+    .glow-button:hover {
+        box-shadow: 0 0 24px rgba(255, 255, 255, 0.9);
+        background-color: rgba(255,255,255,0.1);
+    }
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.char-1 {
+    color: lightgrey;
+    font-weight: bold;
+    text-shadow: 0 0 4px lavender;
+}
+
+.char-2 {
+    color: dimgrey;
+    font-weight: bold;
+}
+
+.char-3 {
+    color: white;
+    font-weight: bold;
+}
+
+.char-4 {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.char-5 {
+    color: darkred;
+    font-weight: bold;
+}
+
+.char-6 {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.char-7 {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+.char-8 {
+    color: darkorange;
+    font-weight: bold;
+}
+
+.char-9 {
+    color: purple;
+    font-weight: bold;
+}
+
+.char-10 {
+    color: deeppink;
+    font-weight: bold;
+}

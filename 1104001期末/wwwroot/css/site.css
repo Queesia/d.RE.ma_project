@@ -1,0 +1,262 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0);
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #FF359A !important;
+        text-shadow: 0 0 6px rgba(0, 212, 255, 0.6);
+    }
+
+    /* 發光＋淡入效果 */
+    @keyframes fadeGlow {
+        0% {
+            opacity: 0;
+            text-shadow: none;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 24px rgba(173, 216, 230, 0.6), 0 0 36px rgba(173, 216, 230, 0.4);
+            transform: translateY(0);
+        }
+    }
+    /* 套用到標題 */
+    .dream-title {
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+/* 套用到副標題（延遲一點出現） */
+.dream-subtitle {
+    opacity: 0;
+    animation: fadeGlow 1s ease-out 1s forwards;
+}
+
+/* 通往質點簡介的按鈕的樣式 */
+.btn-outline-light {
+    color: #fff;
+    background-color: #FFAAD5;
+    border: 1px solid #B9B9FF;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeGlow 1s ease-out 1.5s forwards;
+}
+
+    .btn-outline-light:hover {
+        color: #fff;
+        background-color: #000079;
+    }
+
+/* dc連結 */
+
+.discord-icon {
+    width: 64px;
+    height: 64px;
+}
+
+.discord-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fadb70;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 10px rgba(250, 219, 112, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeGlow 1s ease-out 1.8s forwards;
+}
+
+    .discord-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 18px rgba(250, 219, 112, 0.4);
+    }
+
+/* 防止 <a> 內的文字變成藍色帶底線 */
+a.text-decoration-none {
+    color: inherit;
+}
+
+    a.text-decoration-none:hover {
+        color: inherit;
+    }
+
+/* 按鈕 */
+.btn-primary {
+    color: #fff;
+    background-color: #FFAAD5;
+    border: 1px solid #B9B9FF;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #000079;
+    }
+
+/* 質點總覽的名片 */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px; /* 控制邊角半徑(四個角的彎曲程度) */
+    transition: all 0.3s ease; /* 過渡動畫，讓動畫變得絲滑不卡頓 */
+    animation: fadeGlow 1s ease-out forwards; /* 淡入動畫 */
+}
+
+/* 角色代表色(用於標題) */
+.char-1 {
+    color: #A6A6D2;
+    font-weight: bold;
+    text-shadow: 0 0 4px lavender;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-2 {
+    color: grey;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-3 {
+    color: black;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-4 {
+    color: cornflowerblue;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-5 {
+    color: crimson;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-6 {
+    color: goldenrod;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-7 {
+    color: forestgreen;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-8 {
+    color: darkorange;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-9 {
+    color: darkviolet;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+.char-10 {
+    color: deeppink;
+    font-weight: bold;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+/* 用於美化角色詳情標題的小區塊 */
+.detail-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    backdrop-filter: blur(4px); /* 模糊背景讓文字更清楚 */
+    transition: all 0.3s ease;
+    animation: fadeGlow 1s ease-out forwards;
+}
+
+/* 介紹內文樣式 */
+.dream-story {
+    animation: fadeGlow 1.2s ease-out;
+    font-family: "微軟正黑體", "Noto Sans TC", sans-serif;
+    font-size: 1.05rem;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    text-shadow: 0 0 6px rgba(255,255,255,0.2);
+}
+
+/* 角色圖片庫 */
+.carousel-item img {
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 自動更換圖片 */
+    border-radius: 1rem;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.text-light {
+    color: #fff !important;
+}
+
+    .text-light:hover {
+        color: #FF359A !important;
+    }
+
+/* 背景遮罩用暗化區塊 */
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); /* 調整暗化程度 */
+    z-index: -1;
+}
+
+/* 背景 */
+.page-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 3197px; /* 展示背景全圖 */
+    background-image: url('/images/bg.png');
+    background-repeat: repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    background-attachment: scroll;
+    z-index: -2; /* 將背景置於最底層 */
+    opacity: 1;
+}
+
+.content-overlay {
+    padding-top: 40vh;
+}
+
+/* 底部裝飾 */
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
